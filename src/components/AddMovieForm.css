@@ -1,10 +1,16 @@
+
 .add-movie-form {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
   }
-  
+.add-movie-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
   .add-movie-form input[type="text"] {
     padding: 8px;
     border: 1px solid #555;
@@ -30,13 +36,13 @@
     margin-top: 5px;
     border: 1px solid #555;
     border-radius: 4px;
-    width: 600px; /* Increased width */
+    width: 600px;
     background-color: #444;
     color: #eee;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    display: flex; /* Display search results side by side */
-    flex-wrap: wrap; /* Allow wrapping to the next line */
-    justify-content: flex-start; /* Align items to the start */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
   
   .search-result-item {
@@ -46,8 +52,8 @@
     padding: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    width: 200px; /* Set a fixed width for each search result item */
-    margin: 5px; /* Add some margin between search result items */
+    width: 200px;
+    margin: 5px;
   }
   
   .search-result-item:hover {
@@ -55,8 +61,8 @@
   }
   
   .search-result-poster {
-    width: 150px; /* Increased poster width */
-    height: 225px; /* Increased poster height */
+    width: 150px;
+    height: 225px;
     margin-bottom: 10px;
     object-fit: cover;
     border-radius: 8px;
@@ -66,7 +72,7 @@
   .search-result-details {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
+    align-items: center;
   }
   
   .search-result-buttons {
@@ -95,8 +101,8 @@
     margin-bottom: 20px;
     background-color: #333;
     color: #eee;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Add transition */
-    font-size: 16px; /* Increase font size */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 16px;
   }
   
   .add-movie-form input[type="text"]::placeholder {
@@ -105,8 +111,8 @@
   
   .add-movie-form input[type="text"]:focus {
     border-color: #777;
-    outline: none; /* Remove outline */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add shadow on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
   .loading-spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
@@ -125,4 +131,4 @@
     100% {
       transform: rotate(360deg);
     }
-  }
+  } 
