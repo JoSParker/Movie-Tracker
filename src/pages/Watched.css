@@ -1,0 +1,6 @@
+.watchlist,
+.watched {
+  padding: 20px;
+  background-color: #222; /* Dark background for pages */
+  border-radius: 8px;
+}

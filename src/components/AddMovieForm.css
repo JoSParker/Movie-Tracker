@@ -1,0 +1,89 @@
+.add-movie-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .add-movie-form input[type="text"] {
+    padding: 8px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    width: 200px;
+    margin-bottom: 10px;
+    background-color: #444;
+    color: #eee;
+    transition: border-color 0.3s ease;
+  }
+  
+  .add-movie-form input[type="text"]::placeholder {
+    color: #999;
+  }
+  
+  .add-movie-form input[type="text"]:focus {
+    border-color: #777;
+  }
+  
+  .search-results {
+    list-style: none;
+    padding: 0;
+    margin-top: 5px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    width: 600px; /* Increased width */
+    background-color: #444;
+    color: #eee;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: flex; /* Display search results side by side */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: flex-start; /* Align items to the start */
+  }
+  
+  .search-result-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 200px; /* Set a fixed width for each search result item */
+    margin: 5px; /* Add some margin between search result items */
+  }
+  
+  .search-result-item:hover {
+    background-color: #555;
+  }
+  
+  .search-result-poster {
+    width: 150px; /* Increased poster width */
+    height: 225px; /* Increased poster height */
+    margin-bottom: 10px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .search-result-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+  }
+  
+  .search-result-buttons {
+    margin-top: 5px;
+  }
+  
+  .search-result-item button {
+    margin: 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-result-item button:hover {
+    background-color: #4cae4c;
+  }
