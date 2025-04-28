@@ -87,3 +87,42 @@
   .search-result-item button:hover {
     background-color: #4cae4c;
   }
+  .add-movie-form input[type="text"] {
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 8px;
+    width: 300px;
+    margin-bottom: 20px;
+    background-color: #333;
+    color: #eee;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+    font-size: 16px; /* Increase font size */
+  }
+  
+  .add-movie-form input[type="text"]::placeholder {
+    color: #999;
+  }
+  
+  .add-movie-form input[type="text"]:focus {
+    border-color: #777;
+    outline: none; /* Remove outline */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add shadow on focus */
+  }
+  .loading-spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #eee;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+    margin-top: 10px;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

@@ -5,6 +5,7 @@ import './AddMovieForm.css';
 function AddMovieForm({ addMovieToWatchlist, addMovieToWatched }) {
   const [title, setTitle] = useState('');
   const [searchResults, setSearchResults] = useState([]);
+  const [loading, setLoading] = useState(false); // Add loading state
   const apiKey = 'abd54edd21360db7f61f2d5f0d8dbc9c'; // Replace with your actual API key
 
   const handleInputChange = useCallback(async (e) => {
@@ -12,6 +13,7 @@ function AddMovieForm({ addMovieToWatchlist, addMovieToWatched }) {
     setTitle(newTitle);
 
     if (newTitle.trim()) {
+      setLoading(true); // Set loading to true
       try {
         const response = await axios.get(
           `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${newTitle}`
@@ -23,6 +25,8 @@ function AddMovieForm({ addMovieToWatchlist, addMovieToWatched }) {
         console.error('Error fetching movies:', error);
         // Explicitly set searchResults to an empty array in case of an error
         setSearchResults((prevResults) => []);
+      } finally {
+        setLoading(false); // Set loading to false
       }
     } else {
       // Explicitly set searchResults to an empty array when the input is empty
@@ -50,6 +54,7 @@ function AddMovieForm({ addMovieToWatchlist, addMovieToWatched }) {
         value={title}
         onChange={handleInputChange}
       />
+      {loading && <div className="loading-spinner">Loading...</div>} {/* Show loading spinner */}
       {searchResults.length > 0 && (
         <ul className="search-results">
           {searchResults.map((movie) => (

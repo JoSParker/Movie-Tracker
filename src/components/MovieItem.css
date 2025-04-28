@@ -12,3 +12,53 @@
   .delete-button:hover {
     background-color: #da190b; /* Darker red on hover */
   }
+  .movie-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s ease;
+    width: 200px;
+    margin: 10px; /* Add margin to create a gap */
+  }
+  .favorite-button {
+    background: none; /* Remove background */
+    border: none; /* Remove border */
+    font-size: 20px;
+    cursor: pointer;
+    color: #eee;
+    transition: color 0.3s ease;
+  }
+  
+  .favorite-button:hover {
+    color: #f00 !important;
+  }
+  .delete-button {
+    background-color: #444; /* Dark background */
+    color: #eee; /* Light text */
+    padding: 5px 10px;
+    border: 1px solid #555; /* Dark border */
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .delete-button:hover {
+    background-color: #555; /* Darker background on hover */
+    border-color: #777; /* Lighter border on hover */
+  }
+  .movie-poster {
+    width: 150px;
+    height: 225px;
+    margin-bottom: 10px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease; /* Add transition for scaling */
+  }
+  
+  .movie-poster:hover {
+    transform: scale(1.05); /* Scale up on hover */
+  }
