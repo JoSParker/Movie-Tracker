@@ -50,31 +50,31 @@ function AddMovieForm({ addMovieToWatchlist, addMovieToWatched }) {
     <div className="add-movie-form">
       <input
         type="text"
-        placeholder="Search for a movie"
+        placeholder="Search for a movie or TV show"
         value={title}
         onChange={handleInputChange}
       />
       {loading && <div className="loading-spinner">Loading...</div>} {/* Show loading spinner */}
       {searchResults.length > 0 && (
         <ul className="search-results">
-          {searchResults.map((movie) => (
-            <li key={movie.id} className="search-result-item">
+          {searchResults.map((item) => (
+            <li key={item.id} className="search-result-item">
               <img
                 src={
-                  movie.poster_path
-                    ? `https://image.tmdb.org/t/p/w92${movie.poster_path}`
+                  item.poster_path
+                    ? `https://image.tmdb.org/t/p/w92${item.poster_path}`
                     : 'https://via.placeholder.com/92x138'
                 }
-                alt={movie.title}
+                alt={item.title || item.name}
                 className="search-result-poster"
               />
               <div className="search-result-details">
-                {movie.title} ({movie.release_date ? movie.release_date.substring(0, 4) : 'N/A'})
+                {item.title || item.name} ({item.release_date ? item.release_date.substring(0, 4) : item.first_air_date ? item.first_air_date.substring(0, 4) : 'N/A'})
                 <div className="search-result-buttons">
-                  <button onClick={() => handleAddToWatchlist(movie)}>
+                  <button onClick={() => handleAddToWatchlist(item)}>
                     Add to Watchlist
                   </button>
-                  <button onClick={() => handleAddToWatched(movie)}>
+                  <button onClick={() => handleAddToWatched(item)}>
                     Add to Watched
                   </button>
                 </div>

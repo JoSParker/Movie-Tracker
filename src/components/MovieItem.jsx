@@ -10,11 +10,14 @@ function MovieItem({ movie, children, toggleFavorite, isFavorite, removeMovieFro
   const heartIcon = isFavorite ? '❤️' : '🤍'; // Filled heart if favorite, empty heart otherwise
   const location = useLocation(); // Get the current location
 
+  const title = movie.title || movie.name; // Use movie.title for movies and movie.name for TV shows
+  const year = movie.release_date ? movie.release_date.substring(0, 4) : movie.first_air_date ? movie.first_air_date.substring(0, 4) : 'N/A'; // Handle both release_date and first_air_date
+
   return (
     <li className="movie-item">
-      <img src={imageUrl} alt={movie.title} className="movie-poster" />
-      <div className="movie-title">{movie.title}</div>
-      <div className="movie-year">({movie.release_date ? movie.release_date.substring(0, 4) : 'N/A'})</div>
+      <img src={imageUrl} alt={title} className="movie-poster" />
+      <div className="movie-title">{title}</div>
+      <div className="movie-year">({year})</div>
       {location.pathname !== '/' && ( // Conditionally render the button
         <button
           className="favorite-button"
