@@ -11,7 +11,7 @@ function MovieList({ movies, toggleFavorite, favorites, removeMovieFromWatched }
           movie={movie}
           toggleFavorite={toggleFavorite}
           isFavorite={favorites && favorites.find((m) => m.id === movie.id)}
-          removeMovieFromWatched={removeMovieFromWatched} // Pass removeMovieFromWatched
+          removeMovieFromWatched={removeMovieFromWatched} 
         />
       ))}
     </ul>
