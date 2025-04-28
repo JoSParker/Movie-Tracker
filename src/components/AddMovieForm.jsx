@@ -16,7 +16,7 @@ function AddMovieForm({ addMovieToWatchlist, addMovieToWatched }) {
       setLoading(true); // Set loading to true
       try {
         const response = await axios.get(
-          `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${newTitle}`
+          `https://api.themoviedb.org/3/search/multi?api_key=${apiKey}&query=${newTitle}`
         );
 
         // Explicitly update the searchResults state with the new results
